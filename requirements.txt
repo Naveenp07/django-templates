@@ -3,5 +3,5 @@ django-environ==0.4.4
 django-widget-tweaks==1.4.1
 gunicorn==20.1.0
 psycopg2-binary==2.9.7
-# django-mailgun removed
+django-debug-toolbar==4.3
 

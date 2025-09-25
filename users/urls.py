@@ -1,28 +1,14 @@
-from django.conf.urls import url
+# users/urls.py
 
+from django.urls import path
 from . import views
 
+app_name = "users"
+
 urlpatterns = [
-    url(
-        regex=r'^register/$',
-        view=views.RegisterView.as_view(),
-        name='register'
-    ),
-
-    url(
-        regex=r'^login/$',
-        view=views.LoginView.as_view(),
-        name='login'
-    ),
-    url(
-        regex=r'^logout/$',
-        view=views.LogoutView.as_view(),
-        name='logout'
-    ),
-
-    url(
-        regex=r'^members/$',
-        view=views.MembersView.as_view(),
-        name='members'
-    ),
+    path('register/', views.RegisterView.as_view(), name='register'),
+    path('login/', views.LoginView.as_view(), name='login'),
+    path('logout/', views.LogoutView.as_view(), name='logout'),
+    path('members/', views.MembersView.as_view(), name='members'),
 ]
+
